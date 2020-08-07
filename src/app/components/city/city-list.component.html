@@ -1,0 +1,24 @@
+<p>city-list-component works!</p>
+<div class="row">
+    <table class="table table-striped">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+
+        <td>Description</td>
+        <td>IsCapital</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+
+    <tr *ngFor="let d of data">
+        <td>{{d.CityId}}</td>
+        <td>{{d.Name}}</td>
+
+        <td>{{d.Description}}</td>
+        <td>{{d.IsCapital}}</td>
+        <td><a (click)="EditData(d)" class="btn btn-warning">Edit</a></td>
+        <td><a (click)="deleteData(d.empId)" class="btn btn-danger">Delete</a></td>
+    </tr>
+    </table>
+</div>

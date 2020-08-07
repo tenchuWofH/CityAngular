@@ -1,0 +1,53 @@
+<p>city-edit works!</p>
+
+<div class="container">
+
+  <form [formGroup]="EmpForm" (ngSubmit)="this[EventValue]()">
+
+    <h3>City Basic CRUD Operation</h3>
+    <div class="row">
+
+      <table class="table">
+        <tr>
+          <td>Name</td>
+          <td>
+            <input type="hidden" formControlName="CityId">
+            <input type="text" formControlName="Name">
+            <div *ngIf="submitted && EmpForm.controls.Name.errors" class="text-danger">
+              <div *ngIf="EmpForm.controls.Name.errors.required">Name is required</div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Description</td>
+          <td><input type="text" formControlName="Description">
+            <div *ngIf="submitted && EmpForm.controls.Description.errors" class="text-danger">
+              <div *ngIf="EmpForm.controls.Description.errors.required">Description is required</div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IsCapital</td>
+          <td>
+            <input type="checkbox" formControlName="IsCapital">
+            <div *ngIf="submitted && EmpForm.controls.IsCapital.errors" class="text-danger">
+              <div *ngIf="EmpForm.controls.IsCapital.errors.required">IsCapital is required</div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="btn btn-primary">{{EventValue}}</button>
+          </td>
+        </tr>
+
+      </table>
+    </div>
+
+    
+  </form>
+
+</div>
+
