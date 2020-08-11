@@ -1,3 +1,46 @@
+<div class="example-container mat-elevation-z8">
+  <h2>City List</h2>
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/city-new']"><mat-icon>add</mat-icon> City</a>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="data" class="example-table"
+           matSort matSortActive="Name" matSortDisableClear matSortDirection="asc">
+
+      <!-- City Id Column -->
+      <ng-container matColumnDef="CityId">
+        <th mat-header-cell *matHeaderCellDef>City Id</th>
+        <td mat-cell *matCellDef="let row">{{row.CityId}}</td>
+      </ng-container>
+
+      <!-- City Name Column -->
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef>City Name</th>
+        <td mat-cell *matCellDef="let row">{{row.Name}}</td>
+      </ng-container>
+
+      <!-- City Description Column -->
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let row">{{row.Description}}</td>
+      </ng-container>
+
+      <!-- City IsCapital Column -->
+      <ng-container matColumnDef="IsCapital">
+        <th mat-header-cell *matHeaderCellDef>IsCapital</th>
+        <td mat-cell *matCellDef="let row">{{row.IsCapital}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/city-edit/', row._id]"></tr>
+    </table>
+  </div>
+</div>
+<!--
 <p>city-list-component works!</p>
 <div class="row">
     <table class="table table-striped">
@@ -22,3 +65,4 @@
     </tr>
     </table>
 </div>
+-->

@@ -13,8 +13,8 @@ export class CityService {
     })
   }
   getData() {
-
-    return this.http.get('/api/City');  //https://localhost:44352/ webapi host url
+    // return this.http.get('/api/City');  //https://localhost:44352/ webapi host url
+    return this.http.get('../data/cities.json');
   }
 
   postData(formData) {

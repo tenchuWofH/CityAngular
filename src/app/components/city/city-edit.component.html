@@ -2,7 +2,7 @@
 
 <div class="container">
 
-  <form [formGroup]="EmpForm" (ngSubmit)="this[EventValue]()">
+  <form [formGroup]="CityEditForm" (ngSubmit)="this[EventValue]()">
 
     <h3>City Basic CRUD Operation</h3>
     <div class="row">
@@ -13,8 +13,8 @@
           <td>
             <input type="hidden" formControlName="CityId">
             <input type="text" formControlName="Name">
-            <div *ngIf="submitted && EmpForm.controls.Name.errors" class="text-danger">
-              <div *ngIf="EmpForm.controls.Name.errors.required">Name is required</div>
+            <div *ngIf="submitted && CityEditForm.controls.Name.errors" class="text-danger">
+              <div *ngIf="CityEditForm.controls.Name.errors.required">Name is required</div>
             </div>
           </td>
         </tr>
@@ -22,8 +22,8 @@
         <tr>
           <td>Description</td>
           <td><input type="text" formControlName="Description">
-            <div *ngIf="submitted && EmpForm.controls.Description.errors" class="text-danger">
-              <div *ngIf="EmpForm.controls.Description.errors.required">Description is required</div>
+            <div *ngIf="submitted && CityEditForm.controls.Description.errors" class="text-danger">
+              <div *ngIf="CityEditForm.controls.Description.errors.required">Description is required</div>
             </div>
           </td>
         </tr>
@@ -31,8 +31,8 @@
           <td>IsCapital</td>
           <td>
             <input type="checkbox" formControlName="IsCapital">
-            <div *ngIf="submitted && EmpForm.controls.IsCapital.errors" class="text-danger">
-              <div *ngIf="EmpForm.controls.IsCapital.errors.required">IsCapital is required</div>
+            <div *ngIf="submitted && CityEditForm.controls.IsCapital.errors" class="text-danger">
+              <div *ngIf="CityEditForm.controls.IsCapital.errors.required">IsCapital is required</div>
             </div>
           </td>
         </tr>
@@ -46,7 +46,7 @@
       </table>
     </div>
 
-    
+
   </form>
 
 </div>

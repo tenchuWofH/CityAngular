@@ -1,0 +1,43 @@
+[
+  {
+      "CityId":  1,
+      "Name":  "Gama",
+      "Description":  "The Villains World City.",
+      "IsCapital":  false,
+      "PointsOfInterest": [
+          {
+              "PointOfInterestId":  1,
+              "Name":  "Cine Itapuã",
+              "Description":  "Cinema da Cidade aponsetado"
+          },
+          {
+              "PointOfInterestId":  2,
+              "Name":  "Igreja São Sebastião",
+              "Description":  "Paróquia da Cidade"
+           },
+          {
+              "PointOfInterestId":  3,
+              "Name":  "Sayonara",
+              "Description":  "Referência Entrada da Cidade"
+           }
+      ]
+  },
+  {
+      "CityId":  2,
+      "Name":  "Octogonal",
+      "Description":  "The Middle City.",
+      "IsCapital":  false,
+      "PointsOfInterest":  [
+          {
+              "PointOfInterestId":  4,
+              "Name":  "Terraço Shopping",
+              "Description":  "Shopping da Cidade"
+          },
+          {
+              "PointOfInterestId":  5,
+              "Name":  "HFA",
+              "Description":  "Hospital da Cidade"
+          }
+      ]
+  }
+]
