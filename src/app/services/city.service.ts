@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {Observable, of} from 'rxjs';
+import City from "../data/cities.json";
+import { delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +15,13 @@ export class CityService {
       'Content-Type': 'application/json'
     })
   }
-  getData() {
+  // getData() {
+  //   // return this.http.get('/api/City');  //https://localhost:44352/ webapi host url
+  //   return this.http.get('./data/cities.json');
+  // }
+  getData(): Observable<any>{
     // return this.http.get('/api/City');  //https://localhost:44352/ webapi host url
-    return this.http.get('../data/cities.json');
+    return of(City).pipe(delay(1000));
   }
 
   postData(formData) {

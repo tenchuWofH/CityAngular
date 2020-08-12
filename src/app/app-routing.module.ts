@@ -11,7 +11,7 @@ const routes: Routes = [
     data: { title: 'List of Cities' }
   },
   {
-    path: 'city-edit/:id',
+    path: 'cities/:id',
     component: CityEditComponent,
     data: { title: 'Edit City' }
   },
